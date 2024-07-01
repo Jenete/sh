@@ -1,0 +1,465 @@
+/* styles.css */
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #caa89a;
+    color: rgb(255, 239, 209);
+    scroll-behavior: smooth;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    position: absolute;
+    font-size: 2.3rem;
+    top: 10rem;
+    left: 10rem;
+    padding: 10px 0;
+    text-align: center;
+    width: 80%;
+    z-index: 1000;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with 70% opacity */
+    color: #f5efef;
+}
+
+header nav, header div {
+    opacity: 1; /* Ensure the nav and div elements have full opacity */
+}
+
+
+header .logo h1 {
+    margin: 2.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    box-shadow: 2px 2px 2px 2px gray;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: rgb(193, 182, 182);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+nav ul li:hover {
+    box-shadow: 3px 3px 3px 3px gray;
+}
+
+
+
+.hero img {
+    width: 100%;
+    height: auto;
+    max-height: 1150px;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 32rem;
+    border-top: 5px inset;
+}
+.hero img {
+    /* Applying filter */
+    filter: brightness(70%) contrast(120%) saturate(150%) grayscale(20%) blur(3px);
+    transition: filter 0.3s ease;
+}
+
+.hero img:hover {
+    filter: brightness(90%) contrast(90%) saturate(100%) grayscale(0%) blur(1px);
+}
+
+.join-button{
+    position: fixed;
+    bottom: 6.5rem;
+    right: 3rem;
+    margin: 10px;
+    color: inherit;
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20%;
+    padding: 5px;
+    padding-left: 10px;
+    border: none;
+    text-decoration: none;
+    box-shadow: 4px 4px 4px 4px rgb(132, 156, 134);
+}
+
+.section {
+    padding: 60px 0;
+    margin-bottom: 2rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 32rem;
+    border-top: 10px inset;
+}
+
+.section .container {
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+}
+
+.section p, .section ul {
+    text-align: left;
+}
+
+#subjects ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+#subjects ul li {
+    flex: 1 1 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+#subjects ul li img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+    filter: brightness(100%) grayscale(20%) blur(0.2px);
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form textarea {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact form button {
+    width: 40%;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#contact form button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+#contact form button:hover {
+    opacity: 0.9;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.map-section {
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.map-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#map {
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.price-estimator-section {
+    text-align: center;
+    padding: 60px 0;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.price-estimator-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#price-estimator-form {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    overflow-x: scroll;
+}
+
+#price-estimator-form label {
+    margin: 10px;
+    font-size: 18px;
+    width: max-content;
+    height: auto;
+    border: 5px outset rgb(193, 182, 182,0.2);
+    padding: 5px;
+
+}
+
+#price-output {
+    margin-top: 20px;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.price {
+    font-size: 24px;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+/* Add transitions for input labels */
+#price-estimator-form label {
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+#price-estimator-form label:hover {
+    background-color: rgba(176, 180, 177, 0.6);
+}
+.modal {
+    display: none;
+    background-color: #caa89a;
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal .modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s;
+}
+
+.modal .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal .close-button:hover,
+.modal .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label {
+    margin: 10px 0 5px;
+}
+
+.modal form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal form button:hover {
+    background-color: #45a049;
+}
+.contact-details table tbody a{
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px outset gray;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+table thead {
+    background-color: #767b76;
+    color: white;
+}
+
+table thead th {
+    padding: 10px;
+    text-align: left;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e6a28c;
+}
+
+table tbody tr:hover {
+    background-color: #eca7a7;
+}
+
+table tbody td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody td a {
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+table tbody td a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+
+    nav ul li {
+        margin: 10px 0;
+    }
+    body {
+        font-size: 16px;
+    }
+    header {
+        font-size: 0.8rem;
+        top: 3rem;
+        left: 2rem;
+    }
+    .section {
+        border-top-right-radius: 12rem;
+    }
+    
+}

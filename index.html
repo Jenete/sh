@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Hub Tutoring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <div class="logo">
+                <h1>STEM HUB TUTORING</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#subjects">Subjects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#prices">Pricing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMz35wB6OnakBtJmLW4StI3nd8q-G113qjqMHM=s680-w680-h510" alt="Hero Image">
+    </section>
+    <section id="subjects" class="section">
+        <div class="container">
+            <h2>Our Subjects</h2>
+            <ul>
+                <li><img src="https://i.gifer.com/G0yR.gif" alt="Mathematics"><span>Mathematics</span></li>
+                <li><img src="https://i.pinimg.com/originals/7f/b0/1e/7fb01e9423c6739589232ad3a14b8836.gif" alt="Physical Sciences"><span>Physical Sciences</span></li>
+                <li><img src="https://i.pinimg.com/originals/e5/a3/1f/e5a31fd6f761e0fb85a1ff5e2adc7d70.gif" alt="Engineering Graphics And Design"><span>Engineering Graphics And Design (EGD)</span></li>
+                </ul>
+        </div>
+    </section>
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider" id="slider">
+                    <div class="slide"><img src="./img1.jpg" alt="Testimonial 1"></div>
+                    <div class="slide"><img src="./img3.jpg" alt="Testimonial 2"></div>
+                    <div class="slide"><img src="./img4.jpg" alt="Testimonial 3"></div>
+                    <div class="slide"><img src="./img2.jpg" alt="Testimonial 4"></div>
+                </div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Our Program</h2>
+            <p>STEM Hub is a program that offers tutoring to grade 10, 11, 12 and now rewriters in the STEM Field. We are working on IMPROVING marks or percentages of learners. We have experienced tutors who worked on learners who regard THEMSELVES as slow learners, from 'I can't do it' to "let's give it another try!" and are now motivating other learners. We know that some learners struggle to or do not study at home, STEM Hub creates a safe space for those learners 
+                and connects them with other learners who are eager to learn.<a class="join-button" href="https://wa.me/27740243108?text=Hi,%20I%20need%20a%20tutor%20for%20a%20learner doing grade:" target="_blank">
+                    Join now ↗️</a></p>
+        
+        </div>
+    </section>
+    <section id="prices" class="section">
+        <div class="container">
+            <h2>Pricing</h2>
+            <p>Monthly rates vary, they are usually between R200-R450 <b>per month</b> depending on your preffered subject</p>
+            <div class="price-estimator-section">
+                <h2>Estimate Your Monthly Tuition</h2>
+                <form id="price-estimator-form">
+                    <label>
+                        <input type="checkbox" name="subjects" value="math"> Math
+                    </label>
+                    <label>
+                        <input type="checkbox" name="subjects" value="physics"> Physics
+                    </label>
+                    <label>
+                        <input type="checkbox" name="subjects" value="techmath"> Technical Math
+                    </label>
+                    <label>
+                        <input type="checkbox" name="subjects" value="mathphysics"> EGD
+                    </label>
+                </form>
+                <div id="price-output">
+                    <p>Your estimated price per month is:</p>
+                    <p id="price" class="price">R0</p>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>WhatsApp: 0740243108</p>
+            <p>Facebook: STEM Hub Tutoring</p>
+            <p>Email: stemhubtutoringprogram2021@gmail.com</p>
+        </div>
+    </section>
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="map-section">
+                <h2>Our Location</h2>
+                <h4>Khayelitsha 7784</h4>
+                <div id="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1652.934770299958!2d18.70272528380155!3d-34.04721745667539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc4966efda458f%3A0x2187c08b2a3d177f!2sNazeema%20Isaacs%20Library!5e0!3m2!1sen!2sza!4v1719487490663!5m2!1sen!2sza"" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="closebutton">&times;</span>
+            <h2>Leave Your Contact Details</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="psubjects">Preferred Subjects:</label>
+                <input type="text" id="psubjects" name="subjects" required>
+                
+                <label for="cell1">Cell Number 1:</label>
+                <input type="tel" id="cell1" name="cell1" required>
+                
+                <label for="cell2">Cell Number 2:</label>
+                <input type="tel" id="cell2" name="cell2" required>
+                
+                <button type="submit">Submit</button>
+                <div type="button" id="closebutton" >Close</div>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Copyright © Jenete development</p>
+            <a href="./contacts.html" target="_blank">admin</a>
+        </div>
+    </footer>
+    <script src="scripts.js" type="module"></script>
+</body>
+</html>
