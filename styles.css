@@ -321,7 +321,7 @@ footer {
 #price-estimator-form label:hover {
     background-color: rgba(176, 180, 177, 0.6);
 }
-.modal {
+.modal, .modal2 {
     display: none;
     background-color: #caa89a;
     position: fixed; /* Stay in place */
@@ -332,6 +332,16 @@ footer {
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
 }
+.modal2{
+    display: block;
+    margin: auto;
+    margin-bottom: 10rem;
+    max-width: 400px;
+    position: relative;
+    z-index: 0;
+}
+
+
 
 .modal .modal-content {
     margin: 15% auto; /* 15% from the top and centered */
@@ -344,9 +354,15 @@ footer {
 }
 
 .modal .close-button {
-    color: #aaa;
+    color: #444444;
     float: right;
     font-size: 28px;
+    font-weight: bold;
+}
+.modal .close-button2 {
+    color: #ee7272;
+    border: 3px 3px inset transparent;
+    text-decoration: wavy;
     font-weight: bold;
 }
 
@@ -355,6 +371,14 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal2 .contact-form2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @keyframes fadeIn {

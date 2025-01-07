@@ -24,7 +24,7 @@ async function displayContactDetails() {
         querySnapshot.forEach((doc) => {
             const data = doc.data();
             var listItem ="";
-            listItem = `<tr><td>${data.name}</td> <td>${data.subjects}</td> <td>${data.cell1}</td> <td>${data.cell2}</td>`;
+            listItem = `<tr><td>${data.name}</td> <td>${data.subjects}</td> <td>${data.cell1}</td> <td>${data.cell2}</td> <td>${data.date||'old'}</td>`;
                 
             listItem +=`<td><a href='https://wa.me/27740243108?text=Hi%20${data.name},%20we%20are%20reaching%20out%20because%20you%20said%20you%20need%20a%20tutor%20for%20${data.subjects}.'>💬</a> 1 <a href='tel:${data.cell1}'>📞</a> 2 <a href='tel:${data.cell2}'>📞</a></td></tr>`;
             contactList.innerHTML += listItem;

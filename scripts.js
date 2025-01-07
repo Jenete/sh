@@ -1,10 +1,6 @@
 // Import Firebase modules using URLs
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js';
-import { getFirestore, doc, setDoc, getDocs,collection } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
-
-
-
-
+import { getFirestore, doc, setDoc } from 'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js';
 
 
 const firebaseConfig = {
@@ -32,7 +28,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
             name: name,
             subjects: subjects,
             cell1: cell1,
-            cell2: cell2
+            cell2: cell2,
+            date: new Date().toISOString().substring(0,19)
+        };
+        console.log(datax);
+
+        try {
+            await setDoc(doc(db, "contacts", name+cell1), datax);
+            alert('Details submitted successfully');
+            closeModal();
+        } catch (error) {
+            console.error("Error adding document: ", error);
+            alert('Error submitting details');
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.getElementById('contact-form2');
+    if (!form) return;
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name2').value;
+        const subjects = document.getElementById('psubjects2').value;
+        const cell1 = document.getElementById('cell12').value;
+        const cell2 = document.getElementById('cell22').value;
+        const datax = {
+            name: name,
+            subjects: subjects,
+            cell1: cell1,
+            cell2: cell2,
+            date: new Date().toISOString().substring(0,19)
         };
         console.log(datax);
 
@@ -60,11 +85,14 @@ function closeModal() {
 document.getElementById("closebutton").addEventListener('click',()=>{
     closeModal();
 })
+document.getElementById("closebutton2").addEventListener('click',()=>{
+    closeModal();
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(
         showModal
-    ,4000);
+    ,60000);
 });
 
 
